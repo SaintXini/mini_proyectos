@@ -6,6 +6,16 @@ def generate_password(min_Length, numbers = True, special_characters = True):
     digits = string.digits
     special = string.punctuation
 
-    print(letters, digits, special)
+    characters = letters
+    if numbers:
+        characters += digits
+    if special_characters:
+        characters += special
+
+    pwd = ""
+    meet_criteria = False
+    has_number = False
+
+
 
 generate_password(10)
